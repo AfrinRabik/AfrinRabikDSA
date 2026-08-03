@@ -1,18 +1,17 @@
-class Solution {
-    public boolean checkIfExist(int[] arr) {
-        boolean b=false;
-        for(int i=0;i<arr.length;i++)
+class Solution 
+{
+    public boolean checkIfExist(int[] arr) 
+    {
+        HashSet<Integer> set=new HashSet<>();
+        for(int nums:arr)
         {
-            for(int j=0;j<arr.length;j++)
+            if(set.contains(nums*2)||(nums%2==0&&set.contains(nums/2)))
             {
-                if(arr[i]==2*arr[j]&&i!=j)
-                {
-                    b=true;
-                    
-                }
+                return true;
+               
             }
+             set.add(nums);
         }
-       if(b==false)return false;
-       else return true;
+        return false;
     }
 }
