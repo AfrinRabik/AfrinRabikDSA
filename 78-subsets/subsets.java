@@ -14,8 +14,8 @@ class Solution {
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result=new ArrayList<>();
         List<Integer> current=new ArrayList<>();
-        int index=0;
-        solve(index,nums,current,result);
+        
+        solve(0,nums,current,result);
         return result;
     }
 }
