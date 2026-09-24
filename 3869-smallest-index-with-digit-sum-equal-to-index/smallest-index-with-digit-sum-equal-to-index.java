@@ -3,20 +3,21 @@ class Solution
     public int smallestIndex(int[] nums) 
     {
         for(int i=0;i<nums.length;i++)
-        {
-            if(i==nums[i]&&i<=9)
+        { 
+            int temp=nums[i];
+            if(i==temp&&i<=9)
             {
                 return i;
             }
-            else if(nums[i]>9)
+            else if(temp>9)
             {
                 int r=0;
                 int sum=0;
-                while(nums[i]!=0)
+                while(temp!=0)
                 {
-                    r=nums[i]%10;
+                    r=temp%10;
                     sum+=r;
-                    nums[i]=nums[i]/10;
+                    temp=temp/10;
 
                 }
                 if(sum==i)
