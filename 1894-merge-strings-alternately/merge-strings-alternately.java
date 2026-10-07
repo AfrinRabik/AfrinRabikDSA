@@ -31,10 +31,7 @@ class Solution {
                 ch[i]=word2.charAt(index2++);
                 
              }
-             else if(index2 < word2.length())
-{
-    ch[i] = word2.charAt(index2++);
-}
+             
            }
         }
         if(word2.length()<word1.length())
